@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 14:56:20 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 15:54:52 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/14 17:11:08 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,9 @@ class ClapTrap
 		ClapTrap( void );
 		ClapTrap( std::string name );
 		ClapTrap( const ClapTrap &src );
-		~ClapTrap();
-		ClapTrap	&operator=( const ClapTrap &src );
+		~ClapTrap( void );
+
+		ClapTrap	&operator=( const ClapTrap &src_object );
 
 		//	Getters
 		std::string	getName( void ) const;

@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 14:56:09 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 15:54:52 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/14 17:11:08 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ ClapTrap::ClapTrap( void ) : 	_name("ClapTrap"), \
 								_energyPoints(10), \
 								_attackDamage(0)
 {
-	std::cout << "ClapTrap " << this->_name << " is born!" << std::endl;
+	std::cout	<< "Default ClapTrap "
+				<< this->_name
+				<< " is born!"
+				<< std::endl;
 	return ;
 }
 
@@ -32,17 +35,23 @@ ClapTrap::ClapTrap( std::string name ) :	_name(name), \
 											_energyPoints(10), \
 											_attackDamage(0)
 {
-	std::cout << "ClapTrap " << this->_name << " is born!" << std::endl;
+	std::cout	<< "ClapTrap with name "
+				<< this->_name
+				<< " is born!"
+				<< std::endl;
 	return ;
 }
 
 /*
  *	Copy constructor
  */
-ClapTrap::ClapTrap( const ClapTrap &src )
+ClapTrap::ClapTrap( const ClapTrap &src_object )
 {
-	*this = src;
-	std::cout << "ClapTrap copy of " << src._name << " is born!" << std::endl;
+	*this = src_object;
+	std::cout	<< "ClapTrap"
+				<< src_object._name
+				<< " is born by copy!"
+				<< std::endl;
 	return ;
 }
 
@@ -51,7 +60,10 @@ ClapTrap::ClapTrap( const ClapTrap &src )
  */
 ClapTrap::~ClapTrap( void )
 {
-	std::cout << this->_name << " is destroyed!" << std::endl;
+	std::cout	<< "ClapTrap "
+				<< this->_name
+				<< " is destroyed!"
+				<< std::endl;
 	return ;
 }
 
