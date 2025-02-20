@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 14:56:20 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 17:11:08 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 10:44:39 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class ClapTrap
 	
 	public:
 
-		//	Canonical form
+		/*	Canonical Form	*/
 		ClapTrap( void );
 		ClapTrap( std::string name );
 		ClapTrap( const ClapTrap &src );
@@ -33,13 +33,13 @@ class ClapTrap
 
 		ClapTrap	&operator=( const ClapTrap &src_object );
 
-		//	Getters
+		/*	Getter	*/
 		std::string	getName( void ) const;
 		int			getHitpoints( void ) const;
 		int			getEnergyPoints( void ) const;
 		int			getAttackDamage( void ) const;
 
-		//	Member functions
+		/*	Method	*/
 		void		attack( const std::string& target );
 		void		takeDamage( unsigned int amount );
 		void		beRepaired( unsigned int amount );

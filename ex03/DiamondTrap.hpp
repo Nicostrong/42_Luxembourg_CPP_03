@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 17:13:33 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 17:57:24 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 11:13:26 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class DiamondTrap : public ScavTrap, public FragTrap
 	
 	public:
 
-		//	Canonical form
+		/*	Canonical form	*/
 		DiamondTrap( void );
 		DiamondTrap( std::string name );
 		DiamondTrap( const DiamondTrap &src_object );
@@ -33,8 +33,9 @@ class DiamondTrap : public ScavTrap, public FragTrap
 
 		DiamondTrap	&operator=( const DiamondTrap &src_object );
 
-		//	Member functions
+		/*	Method	*/
 		void		whoAmI( void );
+		
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:28:32 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 17:57:24 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 11:15:00 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class FragTrap : virtual public ClapTrap
 {
 	public:
 
-		//	Canonical form
+		/*	Canonical form	*/
 		FragTrap( void );
 		FragTrap( std::string name );
 		FragTrap( const FragTrap &src_object );
@@ -27,8 +27,9 @@ class FragTrap : virtual public ClapTrap
 
 		FragTrap	&operator=( const FragTrap &src_object );
 
-		//	Member functions
+		/*	Method	*/
 		void		highFivesGuys( void );
+		
 };
 
 #endif

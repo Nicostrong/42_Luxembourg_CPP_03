@@ -6,24 +6,28 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 17:13:16 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 17:58:41 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 11:13:08 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
+/*******************************************************************************
+ *							CANONICAL FORM									   *
+ ******************************************************************************/
+
 /*
  *	Default constructor
  */
-DiamondTrap::DiamondTrap( void ) :	ClapTrap( "Default_clap_name" ), \
+DiamondTrap::DiamondTrap( void ) :	ClapTrap( "DiamondTrap_clap_name" ), \
 									ScavTrap(), \
 									FragTrap()
 {
-	this->_name = "Default";
+	this->_name = "DiamondTrap";
 	this->_hitpoints = FragTrap::getHitpoints();
 	this->_energyPoints = ScavTrap::getEnergyPoints();
 	this->_attackDamage = FragTrap::getAttackDamage();
-	std::cout	<< "Default DiamonTrap "
+	std::cout	<< "Default DiamonTrap with name "
 				<< this->_name
 				<< " is born!"
 				<< std::endl;
@@ -56,9 +60,21 @@ DiamondTrap::DiamondTrap( const DiamondTrap &src_object ) :	ClapTrap(src_object)
 															FragTrap(src_object)
 {
 	*this = src_object;
-	std::cout	<< "DiamonTrap "
+	std::cout	<< "DiamonTrap with name "
 				<< this->_name
 				<< " is born by copy!"
+				<< std::endl;
+	return ;
+}
+
+/*
+ *	Destructor
+ */
+DiamondTrap::~DiamondTrap( void )
+{
+	std::cout	<< "DiamonTrap with name "
+				<< this->_name
+				<< " is destroyed!"
 				<< std::endl;
 	return ;
 }
@@ -73,24 +89,16 @@ DiamondTrap	&DiamondTrap::operator=( const DiamondTrap &src_object )
 		ClapTrap::operator=(src_object);
 		this->_name = src_object._name;
 	}
-	std::cout	<< "DiamonTrap "
+	std::cout	<< "DiamonTrap with name "
 				<< this->_name
 				<< " is born by assignation!"
 				<< std::endl;
 	return (*this);
 }
 
-/*
- *	Destructor
- */
-DiamondTrap::~DiamondTrap( void )
-{
-	std::cout	<< "DiamonTrap "
-				<< this->_name
-				<< " is destroyed!"
-				<< std::endl;
-	return ;
-}
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
 
 /*
  *	Member function

@@ -6,22 +6,26 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:02:18 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 18:06:33 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/02/20 11:16:42 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+
+/*******************************************************************************
+ *							CANONICAL FORM									   *
+ ******************************************************************************/
 
 /*
  *	Default constructor
  */
 ScavTrap::ScavTrap( void )
 {
-	this->_name = "Default";
+	this->_name = "ScavTrap";
 	this->_hitpoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
-	std::cout	<< "default ScavTrap "
+	std::cout	<< "default ScavTrap with name "
 				<< _name
 				<< " is born!"
 				<< std::endl;
@@ -50,9 +54,21 @@ ScavTrap::ScavTrap( std::string name )
 ScavTrap::ScavTrap( const ScavTrap &src ) : ClapTrap(src)
 {
     *this = src;
-    std::cout	<< "ScavTrap copy of "
+    std::cout	<< "ScavTrap with name"
 				<< src._name
-				<< " is created!"
+				<< " is created by copy!"
+				<< std::endl;
+	return ;
+}
+
+/*
+ *	Destructor
+ */
+ScavTrap::~ScavTrap( void )
+{
+	std::cout	<< "ScavTrap with name"
+				<< this->_name
+				<< " is destroyed!"
 				<< std::endl;
 	return ;
 }
@@ -66,31 +82,23 @@ ScavTrap	&ScavTrap::operator=( const ScavTrap &src_object )
 	this->_hitpoints = src_object._hitpoints;
 	this->_energyPoints = src_object._energyPoints;
 	this->_attackDamage = src_object._attackDamage;
-	std::cout	<< "ScavTrap "
+	std::cout	<< "ScavTrap with name"
 				<< this->_name
-				<< " is born by copy!"
+				<< " is born by assignment!"
 				<< std::endl;
 	return (*this);
 }
 
-/*
- *	Destructor
- */
-ScavTrap::~ScavTrap( void )
-{
-	std::cout	<< "ScavTrap "
-				<< this->_name
-				<< " is destroyed!"
-				<< std::endl;
-	return ;
-}
+/*******************************************************************************
+ *								METHOD 										   *
+ ******************************************************************************/
 
 /*
  *	Member function
  */
-void	ScavTrap::guardGate( void )
+void		ScavTrap::guardGate( void )
 {
-	std::cout	<< "ScavTrap "
+	std::cout	<< "ScavTrap with name"
 				<< this->_name
 				<< " has entered in Gate keeper mode!"
 				<< std::endl;
