@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 16:02:08 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 11:05:42 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/05/08 10:31:22 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class ScavTrap : public ClapTrap
 
 		/*	Method	*/
 		void		guardGate( void );
-		
+		void		attack( const std::string& target );
 };
 
 #endif

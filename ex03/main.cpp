@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 17:48:04 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 17:52:52 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/05/08 10:37:59 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,12 @@ int	main( void )
     DiamondTrap copyDiamond = diamond;
     copyDiamond.whoAmI();
 
+    //	Test virtual keyword
+	std::cout << "\nTest virtual keyword" << std::endl;
+	ClapTrap*	clap2 = new ScavTrap("toto");
+	clap2->attack("Nico");
+	delete clap2;
+    
     std::cout << "\nDestroying objects..." << std::endl;
 	return (0);
 }

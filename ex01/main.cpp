@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 14:56:00 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/14 16:23:20 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/05/08 10:28:16 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,12 @@ int	main (void )
 				<< " HP: " << scav1.getHitpoints()
 				<< " Energy: " << scav1.getEnergyPoints()
 				<< std::endl;
-
+	
+	//	Test virtual keyword
+	std::cout << "Test virtual keyword" << std::endl;
+	ClapTrap	*clap = new ScavTrap("toto");
+	clap->attack("Nico");
+	delete clap;
+	
 	return (0);
 }

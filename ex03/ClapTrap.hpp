@@ -6,7 +6,7 @@
 /*   By: nfordoxc <nfordoxc@42luxembourg.lu>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 14:56:20 by nfordoxc          #+#    #+#             */
-/*   Updated: 2025/02/20 11:11:11 by nfordoxc         ###   Luxembourg.lu     */
+/*   Updated: 2025/05/08 10:37:01 by nfordoxc         ###   Luxembourg.lu     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ class ClapTrap
 {
 	protected:
 
-		std::string	_name;
-		int			_hitpoints;
-		int			_energyPoints;
-		int			_attackDamage;
+		std::string		_name;
+		int				_hitpoints;
+		int				_energyPoints;
+		int				_attackDamage;
 	
 	public:
 
@@ -33,18 +33,18 @@ class ClapTrap
 		ClapTrap( const ClapTrap &src );
 		virtual ~ClapTrap( void );
 		
-		ClapTrap	&operator=( const ClapTrap &src_object );
+		ClapTrap		&operator=( const ClapTrap &src_object );
 
 		/*	Getter	*/
-		std::string	getName( void ) const;
-		int			getHitpoints( void ) const;
-		int			getEnergyPoints( void ) const;
-		int			getAttackDamage( void ) const;
+		std::string		getName( void ) const;
+		int				getHitpoints( void ) const;
+		int				getEnergyPoints( void ) const;
+		int				getAttackDamage( void ) const;
 
 		/*	Method	*/
-		void		attack( const std::string& target );
-		void		takeDamage( unsigned int amount );
-		void		beRepaired( unsigned int amount );
+		virtual void	attack( const std::string& target );
+		void			takeDamage( unsigned int amount );
+		void			beRepaired( unsigned int amount );
 
 };
 
